@@ -2,6 +2,8 @@ Cf7bHomework::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  resources :categories, only: %w(new create index)
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
@@ -39,7 +41,7 @@ Cf7bHomework::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
